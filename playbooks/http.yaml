@@ -1,0 +1,10 @@
+---
+- name: install/start httpd
+  hosts: all 
+  become: true 
+  tasks:
+
+  - name: start/enable
+    service:
+      name: "{{ apache_service }}"
+      state: absent
